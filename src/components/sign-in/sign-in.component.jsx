@@ -47,7 +47,10 @@ class SignIn extends React.Component {
     return (
       <div className="sign-in">
         <h2 className="title">I already have an account</h2>
-        <span>Sign in with your email and password:</span>
+        <span>
+          Sign in with your email and password{" "}
+          <span style={{ color: "green" }}>⇩</span>
+        </span>
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
@@ -69,7 +72,11 @@ class SignIn extends React.Component {
 
           <div className="buttons">
             <CustomButton type="submit">Sign in</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButton
+              type="button"
+              onClick={signInWithGoogle}
+              isGoogleSignIn
+            >
               Sign in with Google
             </CustomButton>
           </div>

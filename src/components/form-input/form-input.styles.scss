@@ -2,9 +2,11 @@ $sub-color: grey;
 $main-color: black;
 
 @mixin shrinkLabel {
-  top: -14px;
-  font-size: 12px;
+  top: -20px;
+  left: 4px;
+  font-size: 15px;
   color: $main-color;
+  font-weight: bold;
 }
 
 .group {
@@ -12,10 +14,11 @@ $main-color: black;
   margin: 45px 0;
 
   .form-input {
+    font-family: "Open Sans Condensed", sans-serif;
     background: none;
     background-color: white;
-    color: $sub-color;
-    font-size: 18px;
+    color: rgb(95, 95, 95);
+    font-size: 25px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
@@ -30,16 +33,21 @@ $main-color: black;
 
     &:focus ~ .form-input-label {
       @include shrinkLabel();
+      .form-input-label-colon {
+        display: inline;
+        font-size: 15px;
+        color: $main-color;
+      }
     }
   }
 
-  input[type='password'] {
+  input[type="password"] {
     letter-spacing: 0.3em;
   }
 
   .form-input-label {
     color: $sub-color;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
@@ -47,8 +55,18 @@ $main-color: black;
     top: 10px;
     transition: 300ms ease all;
 
+    .form-input-label-colon {
+      font-size: 15px;
+      display: none;
+    }
+
     &.shrink {
       @include shrinkLabel();
+      .form-input-label-colon {
+        display: inline;
+        color: $main-color;
+        font-size: 15px;
+      }
     }
   }
 }

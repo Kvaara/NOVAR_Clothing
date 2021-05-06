@@ -6,10 +6,15 @@
 
   .title {
     margin: 10px 0;
+    font-size: 39px;
   }
 
   .buttons {
     display: flex;
     justify-content: space-between;
+  }
+
+  span {
+    font-size: 23px;
   }
 }
