@@ -39,8 +39,13 @@ const Header = ({ currentUser, hidden, hoverCartVisible }) => (
       <CartIcon></CartIcon>
     </div>
 
-    {hidden ? null : <CartDropdown></CartDropdown>}
-    {hoverCartVisible ? <CartDropdown></CartDropdown> : null}
+    {hidden ? (
+      hoverCartVisible ? (
+        <CartDropdown></CartDropdown>
+      ) : null
+    ) : (
+      <CartDropdown></CartDropdown>
+    )}
   </div>
 );
 
