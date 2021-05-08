@@ -3,8 +3,8 @@ import { addItemToCart } from "./cart.utils.js";
 
 const INITIAL_STATE = {
   hidden: true,
-  hoverHidden: true,
   cartItems: [],
+  hoverCartVisible: false,
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -14,15 +14,15 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         hidden: !state.hidden,
       };
-    case CartActionTypes.HOVER_CART_HIDDEN:
-      return {
-        ...state,
-        hoverHidden: !state.hoverHidden,
-      };
     case CartActionTypes.ADD_ITEM:
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
+      };
+    case CartActionTypes.HOVER_CART_VISIBLE:
+      return {
+        ...state,
+        hoverCartVisible: !state.hoverCartVisible,
       };
     default:
       return state;
