@@ -7,6 +7,16 @@ export const cartItemsSelector = createSelector(
   (cart) => cart.cartItems
 );
 
+export const cartHiddenSelector = createSelector(
+  [cartSelector],
+  (cart) => cart.hidden
+);
+
+export const hoverCartVisibleSelector = createSelector(
+  [cartSelector],
+  (cart) => cart.hoverCartVisible
+);
+
 export const cartItemsCountSelector = createSelector(
   [cartItemsSelector],
   (cartItems) =>

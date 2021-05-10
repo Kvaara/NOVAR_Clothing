@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import { auth } from "../../firebase/firebase.utils.js";
 import CartIcon from "../cart-icon/cart-icon.component.jsx";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component.jsx";
+import {
+  cartHiddenSelector,
+  hoverCartVisibleSelector,
+} from "../../redux/cart/cart.selectors.js";
+import { currentUserSelector } from "../../redux/user/user.selectors.js";
 
 // TODO if something goes wrong, switch this to the crown.svg and uncomment the .logo-container styles in the header.styles.scss
 import { ReactComponent as Logo } from "../../assets/logo_transparent_svg.svg";
@@ -49,13 +55,10 @@ const Header = ({ currentUser, hidden, hoverCartVisible }) => (
   </div>
 );
 
-const mapStateToProps = ({
-  user: { currentUser },
-  cart: { hidden, hoverCartVisible },
-}) => ({
-  currentUser: currentUser,
-  hidden: hidden,
-  hoverCartVisible: hoverCartVisible,
+const mapStateToProps = createStructuredSelector({
+  currentUser: currentUserSelector,
+  hidden: cartHiddenSelector,
+  hoverCartVisible: hoverCartVisibleSelector,
 });
 
 export default connect(mapStateToProps)(Header);
