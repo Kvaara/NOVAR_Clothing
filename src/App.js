@@ -9,6 +9,8 @@ import { HomePage } from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component.jsx";
 import Header from "./components/header/header.component.jsx";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx";
+import CheckoutPage from "./pages/checkout/checkout.component.jsx";
+
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils.js";
 import { setCurrentUser } from "./redux/user/user.actions.js";
 import { currentUserSelector } from "./redux/user/user.selectors.js";
@@ -57,6 +59,7 @@ class App extends React.Component {
               )
             }
           ></Route>
+          <Route exact path="/checkout" component={CheckoutPage}></Route>
         </Switch>
       </div>
     );

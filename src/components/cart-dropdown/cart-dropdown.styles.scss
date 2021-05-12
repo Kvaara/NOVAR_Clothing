@@ -23,6 +23,11 @@
   z-index: 5;
   animation: 0.3s test;
 
+  .empty-message {
+    font-size: 22px;
+    margin: auto auto;
+  }
+
   .cart-items {
     height: 300px;
     display: flex;
