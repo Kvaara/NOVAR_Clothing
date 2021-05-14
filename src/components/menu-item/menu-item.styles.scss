@@ -11,6 +11,10 @@
   background-size: cover;
   overflow: hidden;
 
+  .background-image {
+    transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  }
+
   &:hover {
     cursor: pointer;
 
