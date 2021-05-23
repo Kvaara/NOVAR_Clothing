@@ -6,21 +6,22 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions.js";
 import { hoverCartVisible } from "../../redux/cart/cart.actions.js";
 import { cartItemsCountSelector } from "../../redux/cart/cart.selectors.js";
 
-import { ReactComponent as CartIconImg } from "../../assets/shopping-bag-5.svg";
-
-import "./cart-icon.styles.scss";
+import {
+  CartItemContainer,
+  CartIconImgStyles,
+  ItemCountSpan,
+} from "./cart-icon.styles.jsx";
 
 const CartIcon = ({ toggleCartHidden, hoverCartVisible, itemCount }) => {
   return (
-    <div
-      className="cart-icon"
+    <CartItemContainer
       onClick={toggleCartHidden}
       onMouseEnter={hoverCartVisible}
       onMouseLeave={hoverCartVisible}
     >
-      <CartIconImg className="shopping-icon"></CartIconImg>
-      <span className="item-count">{itemCount}</span>
-    </div>
+      <CartIconImgStyles></CartIconImgStyles>
+      <ItemCountSpan>{itemCount}</ItemCountSpan>
+    </CartItemContainer>
   );
 };
 

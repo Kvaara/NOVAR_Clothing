@@ -11,30 +11,38 @@ import { ReactComponent as RemoveIcon } from "./delete.svg";
 import { ReactComponent as LeftArrow } from "./left_arrow.svg";
 import { ReactComponent as RightArrow } from "./right_arrow.svg";
 
-import "./checkout-item.styles.scss";
+import {
+  CheckoutItemContainer,
+  ImageContainer,
+  Span,
+  QuantitySpanContainer,
+  ArrowContainer,
+  ValueSpan,
+  RemoveButtonContainer,
+} from "./checkout-item.styles.jsx";
 
 const CheckoutItem = ({ cartItem, clearItem, removeItem, addItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
-    <div className="checkout-item">
-      <div className="image-container">
+    <CheckoutItemContainer>
+      <ImageContainer>
         <img src={imageUrl} alt="item"></img>
-      </div>
-      <span className="name">{name}</span>
-      <span className="quantity">
-        <div className="arrow" onClick={() => removeItem(cartItem)}>
+      </ImageContainer>
+      <Span>{name}</Span>
+      <QuantitySpanContainer>
+        <ArrowContainer onClick={() => removeItem(cartItem)}>
           <LeftArrow></LeftArrow>
-        </div>
-        <span className="value">{quantity}</span>
-        <div className="arrow" onClick={() => addItem(cartItem)}>
+        </ArrowContainer>
+        <ValueSpan>{quantity}</ValueSpan>
+        <ArrowContainer onClick={() => addItem(cartItem)}>
           <RightArrow></RightArrow>
-        </div>
-      </span>
-      <span className="price">{price} €</span>
-      <div className="remove-button" onClick={() => clearItem(cartItem)}>
+        </ArrowContainer>
+      </QuantitySpanContainer>
+      <Span>{price} €</Span>
+      <RemoveButtonContainer onClick={() => clearItem(cartItem)}>
         <RemoveIcon></RemoveIcon>
-      </div>
-    </div>
+      </RemoveButtonContainer>
+    </CheckoutItemContainer>
   );
 };
 const mapDispatchToProps = (dispatch) => ({
