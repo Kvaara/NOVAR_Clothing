@@ -11,6 +11,12 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
   height: fit-content;
+  transform: scale(0.9);
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    transform: scale(1);
+  }
 `;
 
 export const OptionsContainer = styled.div`
