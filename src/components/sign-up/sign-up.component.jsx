@@ -9,7 +9,7 @@ import {
   createUserProfileDocument,
 } from "../../firebase/firebase.utils.js";
 
-import "./sign-up.styles.scss";
+import { SignUpContainer, TitleH2, Span } from "./sign-up.styles.jsx";
 
 class SignUp extends React.Component {
   constructor() {
@@ -53,12 +53,12 @@ class SignUp extends React.Component {
   render() {
     const { name, email, password, confirmPassword } = this.state;
     return (
-      <div className="sign-up">
-        <h2 className="title">I do not have an account</h2>
-        <span>
+      <SignUpContainer>
+        <TitleH2>I do not have an account</TitleH2>
+        <Span>
           Sign up with your email and password{" "}
-          <span style={{ color: "green" }}>⇩</span>
-        </span>
+          <Span style={{ color: "green" }}>⇩</Span>
+        </Span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
@@ -94,7 +94,7 @@ class SignUp extends React.Component {
           ></FormInput>
           <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
-      </div>
+      </SignUpContainer>
     );
   }
 }

@@ -5,7 +5,12 @@ import CustomButton from "../custom-button/custom-button.component.jsx";
 
 import { auth, signInWithGoogle } from "../../firebase/firebase.utils.js";
 
-import "./sign-in.styles.scss";
+import {
+  SignInContainer,
+  TitleH2,
+  Span,
+  ButtonsContainer,
+} from "./sign-in.styles.jsx";
 
 class SignIn extends React.Component {
   constructor() {
@@ -34,23 +39,16 @@ class SignIn extends React.Component {
     const { value, name } = e.target;
 
     this.setState({ [name]: value });
-
-    // Basically another way of doing this is below:
-    // if (name === "password") {
-    //   this.setState({ password: value });
-    // } else {
-    //   this.setState({ email: value });
-    // }
   };
 
   render() {
     return (
-      <div className="sign-in">
-        <h2 className="title">I already have an account</h2>
-        <span>
+      <SignInContainer>
+        <TitleH2>I already have an account</TitleH2>
+        <Span>
           Sign in with your email and password{" "}
-          <span style={{ color: "green" }}>⇩</span>
-        </span>
+          <Span style={{ color: "green" }}>⇩</Span>
+        </Span>
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
@@ -70,7 +68,7 @@ class SignIn extends React.Component {
             required
           ></FormInput>
 
-          <div className="buttons">
+          <ButtonsContainer>
             <CustomButton type="submit">Sign in</CustomButton>
             <CustomButton
               type="button"
@@ -79,9 +77,9 @@ class SignIn extends React.Component {
             >
               Sign in with Google
             </CustomButton>
-          </div>
+          </ButtonsContainer>
         </form>
-      </div>
+      </SignInContainer>
     );
   }
 }
