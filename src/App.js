@@ -16,11 +16,13 @@ import { setCurrentUser } from "./redux/user/user.actions.js";
 import { currentUserSelector } from "./redux/user/user.selectors.js";
 
 class App extends React.Component {
+  // This is used as a way of unsubscribing from the authentication (to prevent memory leaks)
   unsubscribeFromAuth = null;
 
   componentDidMount() {
     const { setCurrentUser } = this.props;
 
+    // Subscribe onAuthStateChanged observer to the unsubscribeFromAuth property.
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth !== null) {
         const userReference = await createUserProfileDocument(userAuth);
@@ -38,6 +40,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
+    // unsubscribe from the auth when the component unmounts to prevent memory leaks
     this.unsubscribeFromAuth();
   }
 
