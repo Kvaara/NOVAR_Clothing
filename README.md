@@ -1,6 +1,6 @@
 Project is still in development!
 
-The development is about 65% done (if not 70%). 
+The development is about 75% done.
 
 However, the application is production ready (to an extent) and can be found here:
 
