@@ -6,7 +6,7 @@
 
 <p align="left">
 	<a href="https://novar-clothing.herokuapp.com/">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Heroku_logo.svg" style="transform: scale(0.8)"> </img>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Heroku_logo.svg" style="transform: scale(0.7);"> </img>
 	</a>
 </p>
 
