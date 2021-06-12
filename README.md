@@ -1,4 +1,4 @@
-# NOVAR Clothing     ![](https://raw.githubusercontent.com/Kvaara/NOVAR_Clothing/main/src/assets/logo_transparent_svg.svg)
+# NOVAR Clothing    ![](https://raw.githubusercontent.com/Kvaara/NOVAR_Clothing/main/src/assets/logo_transparent_svg.svg)
 This is a pretty big React project that I've been working on. Many of the React libraries and tools have been implemented/used such as [React Hooks](https://reactjs.org/docs/hooks-intro.html), [Redux](https://react-redux.js.org/), [Redux-Saga](https://redux-saga.js.org/), [React Router](https://www.npmjs.com/package/react-router), [React Context API](https://reactjs.org/docs/context.html) and [session storage](https://www.robinwieruch.de/local-storage-react).
 
 In addition, I have used the [Redux-Persist](https://www.npmjs.com/package/redux-persist) library for session persistence. I've also tried to use [Memoization](https://rossbulat.medium.com/how-to-memoize-in-react-3d20cbcd2b6e) in all possible aspects (**tried**) for the sake of performance increases.
