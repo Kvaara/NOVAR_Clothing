@@ -7,11 +7,14 @@ export const MenuItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  margin: 0 7.5px 15px;
+  border: 1px solid #bebebe;
+  border-radius: 10px;
+  margin: 0 10px 20px;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
   &:hover {
     cursor: pointer;
@@ -51,9 +54,10 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 5px;
   background-color: white;
-  opacity: 0.75;
+  opacity: 0.85;
   position: absolute;
 `;
 
@@ -66,5 +70,5 @@ export const TitleH1 = styled.div`
 
 export const SubtitleSpan = styled.span`
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 17px;
 `;

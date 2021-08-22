@@ -9,10 +9,14 @@ export const CollectionItemContainer = styled.div`
   align-items: center;
   position: relative;
 
+  .image {
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: border 100ms ease-in-out;
+  }
+
   &:hover {
-    .image {
-      outline: 2px solid black;
-    }
+    box-shadow: inset 0px -6px 0px black;
 
     .custom-button {
       opacity: 0.85;
@@ -25,8 +29,9 @@ export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
-  top: 255px;
+  top: 240px;
   display: none;
+  font-size: 18px;
 `;
 
 export const BackgroundImageContainer = styled.div`
@@ -45,7 +50,7 @@ export const CollectionFooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 `;
 
 export const NameSpan = styled.span`

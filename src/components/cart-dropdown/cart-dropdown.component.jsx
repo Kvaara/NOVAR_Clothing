@@ -22,7 +22,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
           <CartItem key={cartItem.id} item={cartItem}></CartItem>
         ))
       ) : (
-        <EmptyMessageSpan>Your cart is currently empty</EmptyMessageSpan>
+        <EmptyMessageSpan>Your cart is currently empty...</EmptyMessageSpan>
       )}
     </CartItemsContainer>
     <CustomButton
@@ -30,7 +30,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
         history.push("/checkout");
         dispatch(toggleCartHidden());
       }}
-      style={{ "margin-top": "auto" }}
+      style={{ marginTop: "auto", borderRadius: "300px" }}
     >
       GO TO CHECKOUT
     </CustomButton>
