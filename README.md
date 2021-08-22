@@ -1,4 +1,4 @@
-# NOVAR Clothing    ![](https://raw.githubusercontent.com/Kvaara/NOVAR_Clothing/main/src/assets/logo_transparent_svg.svg)
+# NOVAR Clothing     ![](https://raw.githubusercontent.com/Kvaara/NOVAR_Clothing/main/src/assets/logo_transparent_svg.svg)
 This is a pretty big React project that I've been working on. Many of the React libraries and tools have been implemented/used such as [React Hooks](https://reactjs.org/docs/hooks-intro.html), [Redux](https://react-redux.js.org/), [Redux-Saga](https://redux-saga.js.org/), [React Router](https://www.npmjs.com/package/react-router), [React Context API](https://reactjs.org/docs/context.html) and [session storage](https://www.robinwieruch.de/local-storage-react).
 
 In addition, I have used the [Redux-Persist](https://www.npmjs.com/package/redux-persist) library for session persistence. I've also tried to use [Memoization](https://rossbulat.medium.com/how-to-memoize-in-react-3d20cbcd2b6e) in all possible aspects (**tried**) for the sake of performance increases.
@@ -18,3 +18,5 @@ This project itself is a lot like an e-commerce website where you could buy clot
 **This report can be found [here](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fnovar-clothing.herokuapp.com%2F)** 
 
 If I were to comment this I'd say that the **report was kind of good**. Performance needs to be improved upon and that's for certain. I knew even before this test that the **website could perform even faster** than it currently does. However, frankly speaking I'm a total newbie in the React realm so improving performance is **one of the hardest things for me**. I will be improving the performance until I'm **100%** done with this project. I'm pretty curious about how much more performant I can make the website. **I'll try to aim for at least a performance score of 80** before I'll put this project into the rest.
+
+> Of course hosting on Heroku could be the bottleneck but even then performance can 100 % be better.
