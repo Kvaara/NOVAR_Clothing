@@ -7,6 +7,12 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -16,6 +22,14 @@ export const LogoContainer = styled(Link)`
 
   &:hover {
     transform: scale(1);
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 50px;
+    padding: 0;
+    transform: scale(0.6);
+    position: relative;
+    top: -20px;
   }
 `;
 
