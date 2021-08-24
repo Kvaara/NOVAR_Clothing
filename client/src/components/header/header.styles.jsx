@@ -23,7 +23,7 @@ export const LogoContainer = styled(Link)`
   @media screen and (max-width: 800px) {
     width: 50px;
     padding: 0;
-    transform: scale(0.6);
+    transform: scale(0.5);
     position: relative;
     top: -20px;
 
@@ -41,8 +41,21 @@ export const OptionsContainer = styled.div`
   justify-content: flex-end;
   font-size: 20px;
 
+  div:not(:last-child),
+  a {
+    border-bottom: 1px solid #000;
+    padding: 0;
+    margin: 0 15px;
+  }
+
   @media screen and (max-width: 800px) {
     width: 80%;
+    font-size: 15px;
+    div,
+    a {
+      padding: 0;
+      margin: 0 5px !important;
+    }
   }
 `;
 

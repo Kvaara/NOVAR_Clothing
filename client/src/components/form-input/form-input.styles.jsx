@@ -18,6 +18,10 @@ export const GroupContainer = styled.div`
   input[type="password"] {
     letter-spacing: 0.3em;
   }
+
+  @media screen and (max-width: 800px) {
+    margin: 0px 0px;
+  }
 `;
 
 export const FormInputContainer = styled.input`
@@ -45,6 +49,10 @@ export const FormInputContainer = styled.input`
       font-size: 15px;
       color: ${mainColor};
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    margin-top: 20px;
   }
 `;
 

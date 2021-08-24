@@ -16,7 +16,7 @@ export const CheckoutPageContainer = styled.div`
   @media screen and (max-width: 800px) {
     img {
       min-width: 40px;
-      min-height: 45px;
+      // min-height: 45px;
     }
   }
 `;
@@ -57,9 +57,16 @@ export const CheckoutHeaderBlockContainer = styled.div`
 `;
 
 export const CheckoutTotalContainer = styled.div`
+  display: flex;
+  align-item: center;
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
+  @media screen and (max-width: 800px) {
+    font-size: 25px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
 `;
 
 export const TestWarningContainer = styled.div`
@@ -81,6 +88,7 @@ export const TestWarningContainer = styled.div`
       font-size: 16px;
       font-weight: 700;
     }
-    width: 35vh;
+    width: 35vw;
+    min-width: 275px;
   }
 `;

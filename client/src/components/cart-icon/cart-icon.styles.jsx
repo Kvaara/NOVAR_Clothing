@@ -14,6 +14,10 @@ export const CartItemContainer = styled.div`
   &:hover {
     transform: rotate(12deg) scale(1.05);
   }
+
+  @media screen and (max-width: 800px) {
+    transform: scale(0.8);
+  }
 `;
 
 export const CartIconImgStyles = styled(CartIconImg)`

@@ -24,12 +24,23 @@ export const Span = styled.span`
   width: 23%;
   font-size: 23px;
   font-weight: bold;
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+    min-width: 35px;
+  }
 `;
 
 export const QuantitySpanContainer = styled.span`
   width: 23%;
   font-size: 23px;
   display: flex;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+    min-width: 55px;
+    span {
+      margin: 0;
+    }
+  }
 `;
 
 export const ArrowContainer = styled.div`
@@ -41,11 +52,20 @@ export const ArrowContainer = styled.div`
   &:hover {
     transform: scale(1.2);
   }
+
+  @media screen and (max-width: 800px) {
+    transform: scale(0.8);
+  }
 `;
 
 export const ValueSpan = styled.span`
   margin: 0 10px;
   font-weight: bolder;
+  @media screen and (max-width: 800px) {
+    span {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const RemoveButtonContainer = styled.div`
@@ -57,5 +77,9 @@ export const RemoveButtonContainer = styled.div`
 
   &:hover {
     transform: scale(1.5);
+  }
+
+  @media screen and (max-width: 800px) {
+    transform: scale(0.9);
   }
 `;
