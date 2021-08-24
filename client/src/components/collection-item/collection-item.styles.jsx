@@ -72,4 +72,6 @@ export const NameSpan = styled.span`
 export const PriceSpan = styled.span`
   width: 10%;
   font-size: 23px;
+  min-width: 50px;
+  height: 30px;
 `;

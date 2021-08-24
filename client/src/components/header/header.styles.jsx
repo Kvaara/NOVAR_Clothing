@@ -20,16 +20,16 @@ export const LogoContainer = styled(Link)`
   transform: scale(0.9);
   transition: 200ms ease-in-out;
 
-  &:hover {
-    transform: scale(1);
-  }
-
   @media screen and (max-width: 800px) {
     width: 50px;
     padding: 0;
     transform: scale(0.6);
     position: relative;
     top: -20px;
+
+    $:hover {
+      transform: unset;
+    }
   }
 `;
 

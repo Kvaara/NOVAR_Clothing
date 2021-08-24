@@ -12,6 +12,13 @@ export const CheckoutPageContainer = styled.div`
     margin-left: auto;
     margin-top: 30px;
   }
+
+  @media screen and (max-width: 800px) {
+    img {
+      min-width: 40px;
+      min-height: 45px;
+    }
+  }
 `;
 
 export const CheckoutHeaderContainer = styled.div`
@@ -20,7 +27,6 @@ export const CheckoutHeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
-  font-size: 25px;
 `;
 
 export const CheckoutHeaderBlockContainer = styled.div`
@@ -30,6 +36,23 @@ export const CheckoutHeaderBlockContainer = styled.div`
 
   &:last-child {
     width: 8%;
+  }
+
+  span {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 800px) {
+    span {
+      font-size: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    &:last-child {
+      min-width: 41px;
+    }
   }
 `;
 
@@ -50,5 +73,14 @@ export const TestWarningContainer = styled.div`
   span {
     font-size: 31px;
     color: red;
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 800px) {
+    span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    width: 35vh;
   }
 `;
