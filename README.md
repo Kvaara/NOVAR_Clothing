@@ -11,7 +11,7 @@ This project itself is a lot like an e-commerce website where you could buy clot
 
 **However, the application is production ready (to an extent) and can be found on Heroku:**
 
-[![See on Heroku](https://raw.githubusercontent.com/Kvaara/NOVAR_Clothing/main/public/heroku-logotype-horizontal-purple.svg)](https://novar-clothing.herokuapp.com/)
+[![See on Heroku](https://raw.githubusercontent.com/Kvaara/NOVAR_Clothing/main/client/public/heroku-logotype-horizontal-purple.svg)](https://novar-clothing.herokuapp.com/)
 
 ## Performance test as of 12.6.2021 using lighthouse performance scoring:
 ![](https://raw.githubusercontent.com/Kvaara/NOVAR_Clothing/main/Lighthouse%20performance%20scoring%20(12.6.2021).png)
