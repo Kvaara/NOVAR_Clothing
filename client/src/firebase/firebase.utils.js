@@ -28,6 +28,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         name: displayName,
         email,
         createdAt,
+        cartItems: [],
+        userId: userAuth.uid,
         ...additionalData,
       });
     } catch (e) {
@@ -36,6 +38,20 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   }
 
   return userReference;
+};
+
+export const getUserCartRef = async (userId) => {
+  const cartRef = firestore.collection("users").doc(userId);
+  const snapshot = await cartRef.get();
+  const cartItemsExist = snapshot.get("cartItems");
+
+  if (!cartItemsExist) {
+    const cartDocRef = firestore.collection("users").doc(userId);
+    await cartDocRef.update({ cartItems: [] });
+    return cartDocRef;
+  } else {
+    return snapshot.ref;
+  }
 };
 
 export const addCollectionAndDocuments = async (
