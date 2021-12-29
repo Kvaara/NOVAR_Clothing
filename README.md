@@ -7,7 +7,7 @@ You can make an account on the website using email and password or you can simpl
 
 This project itself is a lot like an e-commerce website where you could buy clothing & accessories. The payment would be done through [Stripe](https://stripe.com/en-fi).
 
-> Note: project is still in development! The development is about 75% done.
+> Note: ~~project is still in development! The development is about 75% done.~~ The project is now 100% done! I might do some improvements in the future but for now this has been a fun project.
 
 **However, the application is production ready (to an extent) and can be found on Heroku:**
 
